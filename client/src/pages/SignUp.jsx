@@ -25,7 +25,12 @@ function SignUp() {
         },
         body: JSON.stringify(formData),
       });
-      await res.json();
+      const data = await res.json();
+      if (data.success === false) {
+        setLoading(false);
+        setError(data.message);
+        return;
+      }
       setLoading(false);
       setError(null);
       navigate('/sign-in');
@@ -65,14 +70,14 @@ function SignUp() {
           disabled={loading}
           className="bg-slate-700 text-white p-3 rounded-lg uppercase hover:opacity-95 disabled:opacity-80"
         >
-          {loading ? "Loading..." : "Sign up"}
+          {loading ? "Loading..." : "Sign Up"}
         </button>
       </form>
 
       <div className="flex gap-2 mt-5">
         <p>Have an account?</p>
         <Link to={"/sign-in"}>
-          <span className="text-blue-700">Sign-in</span>
+          <span className="text-blue-700">Sign In</span>
         </Link>
       </div>
       {error && <p className="text-red-500 mt-5">{error}</p>}
