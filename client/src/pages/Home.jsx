@@ -168,7 +168,7 @@ function Home() {
       </div>
 
 
-      {/* Recent places for rent*/}
+      {/* Recent places for rent section*/}
        <br />
       <h2 className='text-2xl font-semibold text-slate-600  ml-6'>Recent places for rent</h2>
       <Link className='text-sm text-blue-800 hover:underline ml-6'>Show more places for rent</Link>
@@ -189,7 +189,7 @@ function Home() {
         ))}
       </div>
 
-      {/* Recent places for sale*/}
+      {/* Recent places for sale section*/}
       <br />
       <h2 className='text-2xl font-semibold text-slate-600  ml-6'>Recent places for sale</h2>
       <Link className='text-sm text-blue-800 hover:underline ml-6'>Show more places for sale</Link>
