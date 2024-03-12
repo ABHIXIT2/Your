@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link , useNavigate} from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function SignUp() {
   const [formData, setFormData] = useState({});
@@ -18,6 +18,7 @@ function SignUp() {
     try {
       e.preventDefault();
       setLoading(true);
+
       const res = await fetch("/api/auth/signup", {
         method: "POST",
         headers: {
@@ -25,15 +26,17 @@ function SignUp() {
         },
         body: JSON.stringify(formData),
       });
+
       const data = await res.json();
       if (data.success === false) {
         setLoading(false);
         setError(data.message);
         return;
       }
+      
       setLoading(false);
       setError(null);
-      navigate('/sign-in');
+      navigate("/sign-in");
     } catch (error) {
       setLoading(false);
       setError(error.message);
@@ -42,7 +45,7 @@ function SignUp() {
 
   return (
     <div className="p-3 max-w-lg mx-auto">
-      <h1 className="text-3xl text-center font font-semibold my-7">SignUp</h1>
+      <h1 className="text-3xl text-center font font-semibold my-7">Sign Up</h1>
       <form onSubmit={handleSubmit} className="flex flex-col gap-4">
         <input
           type="text"
