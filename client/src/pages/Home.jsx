@@ -148,8 +148,8 @@ function Home() {
 
       {/* offer section */}
       <br />
-      <h2 className='text-2xl font-semibold text-slate-600  ml-6'>Recent offers</h2>
-      <Link className='text-sm text-blue-800 hover:underline ml-6'>Show more offers</Link>
+      <h2 className='text-2xl font-semibold text-slate-600  ml-32'>Recent offers</h2>
+      <Link className='text-sm text-blue-800 hover:underline ml-32'>Show more offers</Link>
       <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mx-auto max-w-screen-xl my-2 p-5'>
         
         {offerData.map((offer, index) => (
@@ -169,8 +169,8 @@ function Home() {
 
       {/* Recent places for rent section*/}
        <br />
-      <h2 className='text-2xl font-semibold text-slate-600  ml-6'>Recent places for rent</h2>
-      <Link className='text-sm text-blue-800 hover:underline ml-6'>Show more places for rent</Link>
+      <h2 className='text-2xl font-semibold text-slate-600   ml-32'>Recent places for rent</h2>
+      <Link className='text-sm text-blue-800 hover:underline ml-32'>Show more places for rent</Link>
 
       <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mx-auto max-w-screen-xl my-2 p-5'>
         
@@ -190,8 +190,8 @@ function Home() {
 
       {/* Recent places for sale section*/}
       <br />
-      <h2 className='text-2xl font-semibold text-slate-600  ml-6'>Recent places for sale</h2>
-      <Link className='text-sm text-blue-800 hover:underline ml-6'>Show more places for sale</Link>
+      <h2 className='text-2xl font-semibold text-slate-600  ml-32'>Recent places for sale</h2>
+      <Link className='text-sm text-blue-800 hover:underline ml-32'>Show more places for sale</Link>
 
       <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mx-auto max-w-screen-xl my-2 p-5'>
         
